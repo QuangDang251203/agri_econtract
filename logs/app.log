@@ -799,3 +799,750 @@ This generated password is for development use only. Your security configuration
 2026-03-10T14:58:37.027+07:00  INFO 12420 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-10T14:58:37.029+07:00  INFO 12420 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-03-10T14:58:37.032+07:00  INFO 12420 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:32:10.982+07:00  INFO 5064 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 5064 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:32:10.985+07:00  INFO 5064 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:32:11.752+07:00  INFO 5064 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:32:11.826+07:00  INFO 5064 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:32:12.367+07:00  INFO 5064 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:32:12.380+07:00  INFO 5064 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:32:12.380+07:00  INFO 5064 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:32:12.428+07:00  INFO 5064 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1397 ms
+2026-03-10T15:32:12.608+07:00  INFO 5064 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:32:12.673+07:00  INFO 5064 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:32:13.129+07:00  INFO 5064 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:32:13.161+07:00  INFO 5064 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:32:13.251+07:00  INFO 5064 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4d174189
+2026-03-10T15:32:13.259+07:00  INFO 5064 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:32:13.290+07:00  WARN 5064 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:32:13.308+07:00  INFO 5064 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:32:14.277+07:00  INFO 5064 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:32:14.285+07:00  INFO 5064 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:32:14.360+07:00  INFO 5064 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:32:14.604+07:00  WARN 5064 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:32:14.687+07:00  WARN 5064 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 39876b8e-c179-44b7-9872-7514256788f9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:32:14.696+07:00  INFO 5064 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:32:15.223+07:00  INFO 5064 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:32:15.278+07:00  INFO 5064 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:32:15.284+07:00  INFO 5064 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.813 seconds (process running for 5.58)
+2026-03-10T15:32:54.620+07:00  INFO 5064 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:32:54.620+07:00  INFO 5064 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:32:54.621+07:00  INFO 5064 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T15:32:54.665+07:00 ERROR 5064 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null
+	at com.agribank.e_contract.service.mail.MailServiceImpl.sendMail(MailServiceImpl.java:19) ~[classes/:na]
+	at com.agribank.e_contract.controller.MailController.sendMail(MailController.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-10T15:36:20.726+07:00  INFO 5064 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:36:20.736+07:00  INFO 5064 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:36:20.740+07:00  INFO 5064 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:36:20.743+07:00  INFO 5064 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:36:20.752+07:00  INFO 5064 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:36:24.451+07:00  INFO 9800 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 9800 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:36:24.454+07:00  INFO 9800 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:36:25.176+07:00  INFO 9800 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:36:25.248+07:00  INFO 9800 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:36:25.813+07:00  INFO 9800 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:36:25.827+07:00  INFO 9800 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:36:25.828+07:00  INFO 9800 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:36:25.877+07:00  INFO 9800 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1380 ms
+2026-03-10T15:36:26.073+07:00  INFO 9800 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:36:26.132+07:00  INFO 9800 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:36:26.626+07:00  INFO 9800 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:36:26.660+07:00  INFO 9800 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:36:26.742+07:00  INFO 9800 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5e020dd1
+2026-03-10T15:36:26.744+07:00  INFO 9800 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:36:26.777+07:00  WARN 9800 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:36:26.794+07:00  INFO 9800 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:36:27.691+07:00  INFO 9800 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:36:27.699+07:00  INFO 9800 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:36:27.773+07:00  INFO 9800 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:36:28.060+07:00  WARN 9800 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:36:28.149+07:00  WARN 9800 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 19c0faa8-7c3e-4f39-8204-a6917362601f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:36:28.156+07:00  INFO 9800 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:36:28.685+07:00  INFO 9800 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:36:28.739+07:00  INFO 9800 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:36:28.745+07:00  INFO 9800 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.792 seconds (process running for 5.528)
+2026-03-10T15:36:33.487+07:00  INFO 9800 --- [agribank_e-contract] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:36:33.488+07:00  INFO 9800 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:36:33.490+07:00  INFO 9800 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-10T15:39:37.206+07:00  INFO 9800 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:39:37.217+07:00  INFO 9800 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:39:37.222+07:00  INFO 9800 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:39:37.224+07:00  INFO 9800 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:39:37.227+07:00  INFO 9800 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:39:40.102+07:00  INFO 1604 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 1604 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:39:40.105+07:00  INFO 1604 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:39:40.943+07:00  INFO 1604 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:39:41.025+07:00  INFO 1604 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:39:41.576+07:00  INFO 1604 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:39:41.590+07:00  INFO 1604 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:39:41.591+07:00  INFO 1604 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:39:41.639+07:00  INFO 1604 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1490 ms
+2026-03-10T15:39:41.823+07:00  INFO 1604 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:39:41.883+07:00  INFO 1604 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:39:42.329+07:00  INFO 1604 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:39:42.360+07:00  INFO 1604 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:39:42.441+07:00  INFO 1604 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f0c1ae1
+2026-03-10T15:39:42.443+07:00  INFO 1604 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:39:42.471+07:00  WARN 1604 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:39:42.494+07:00  INFO 1604 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:39:43.423+07:00  INFO 1604 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:39:43.433+07:00  INFO 1604 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:39:43.506+07:00  INFO 1604 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:39:43.799+07:00  WARN 1604 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:39:43.890+07:00  WARN 1604 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 25aabf9c-25e8-4333-82a9-66559ea6f6fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:39:43.898+07:00  INFO 1604 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:39:44.452+07:00  INFO 1604 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:39:44.511+07:00  INFO 1604 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:39:44.517+07:00  INFO 1604 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.933 seconds (process running for 5.699)
+2026-03-10T15:39:51.744+07:00  INFO 1604 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:39:51.755+07:00  INFO 1604 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:39:51.760+07:00  INFO 1604 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:39:51.763+07:00  INFO 1604 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:39:51.766+07:00  INFO 1604 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:39:54.245+07:00  INFO 17808 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 17808 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:39:54.248+07:00  INFO 17808 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:39:54.964+07:00  INFO 17808 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:39:55.031+07:00  INFO 17808 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:39:55.596+07:00  INFO 17808 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:39:55.612+07:00  INFO 17808 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:39:55.612+07:00  INFO 17808 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:39:55.663+07:00  INFO 17808 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1374 ms
+2026-03-10T15:39:55.853+07:00  INFO 17808 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:39:55.916+07:00  INFO 17808 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:39:56.407+07:00  INFO 17808 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:39:56.439+07:00  INFO 17808 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:39:56.530+07:00  INFO 17808 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2fafa7b5
+2026-03-10T15:39:56.532+07:00  INFO 17808 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:39:56.563+07:00  WARN 17808 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:39:56.587+07:00  INFO 17808 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:39:57.521+07:00  INFO 17808 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:39:57.530+07:00  INFO 17808 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:39:57.610+07:00  INFO 17808 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:39:57.897+07:00  WARN 17808 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:39:57.982+07:00  WARN 17808 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b01daefd-c6a6-4c1f-8a50-806d4611f51a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:39:57.991+07:00  INFO 17808 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:39:58.510+07:00  INFO 17808 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:39:58.565+07:00  INFO 17808 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:39:58.570+07:00  INFO 17808 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.844 seconds (process running for 5.668)
+2026-03-10T15:40:42.969+07:00  INFO 17808 --- [agribank_e-contract] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:40:42.970+07:00  INFO 17808 --- [agribank_e-contract] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:40:42.971+07:00  INFO 17808 --- [agribank_e-contract] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T15:41:42.478+07:00  INFO 17808 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:41:42.488+07:00  INFO 17808 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:41:42.493+07:00  INFO 17808 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:41:42.496+07:00  INFO 17808 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:41:42.499+07:00  INFO 17808 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:41:46.306+07:00  INFO 7128 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 7128 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:41:46.310+07:00  INFO 7128 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:41:47.126+07:00  INFO 7128 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:41:47.202+07:00  INFO 7128 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:41:47.776+07:00  INFO 7128 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:41:47.791+07:00  INFO 7128 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:41:47.791+07:00  INFO 7128 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:41:47.842+07:00  INFO 7128 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1480 ms
+2026-03-10T15:41:48.029+07:00  INFO 7128 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:41:48.095+07:00  INFO 7128 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:41:48.582+07:00  INFO 7128 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:41:48.616+07:00  INFO 7128 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:41:48.700+07:00  INFO 7128 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7809b43a
+2026-03-10T15:41:48.702+07:00  INFO 7128 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:41:48.735+07:00  WARN 7128 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:41:48.761+07:00  INFO 7128 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:41:49.753+07:00  INFO 7128 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:41:49.763+07:00  INFO 7128 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:41:49.840+07:00  INFO 7128 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:41:50.109+07:00  WARN 7128 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:41:50.198+07:00  WARN 7128 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 04713b13-8a1d-4302-ac80-21dce5fb582e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:41:50.206+07:00  INFO 7128 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:41:50.741+07:00  INFO 7128 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:41:50.800+07:00  INFO 7128 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:41:50.805+07:00  INFO 7128 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.041 seconds (process running for 5.793)
+2026-03-10T15:41:57.191+07:00  INFO 7128 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:41:57.191+07:00  INFO 7128 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:41:57.192+07:00  INFO 7128 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T15:46:38.082+07:00  INFO 7128 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:46:38.093+07:00  INFO 7128 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:46:38.097+07:00  INFO 7128 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:46:38.099+07:00  INFO 7128 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:46:38.103+07:00  INFO 7128 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:46:41.753+07:00  INFO 13772 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 13772 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:46:41.757+07:00  INFO 13772 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:46:42.556+07:00  INFO 13772 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:46:42.626+07:00  INFO 13772 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:46:43.204+07:00  INFO 13772 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:46:43.218+07:00  INFO 13772 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:46:43.218+07:00  INFO 13772 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:46:43.265+07:00  INFO 13772 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1462 ms
+2026-03-10T15:46:43.458+07:00  INFO 13772 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:46:43.521+07:00  INFO 13772 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:46:43.996+07:00  INFO 13772 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:46:44.029+07:00  INFO 13772 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:46:44.114+07:00  INFO 13772 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1dbc607d
+2026-03-10T15:46:44.117+07:00  INFO 13772 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:46:44.145+07:00  WARN 13772 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:46:44.170+07:00  INFO 13772 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:46:45.146+07:00  INFO 13772 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:46:45.155+07:00  INFO 13772 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:46:45.237+07:00  INFO 13772 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:46:45.519+07:00  WARN 13772 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:46:45.607+07:00  WARN 13772 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c5e08592-1c45-4ec8-bb28-a01a4c9398c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:46:45.615+07:00  INFO 13772 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:46:46.219+07:00  INFO 13772 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:46:46.277+07:00  INFO 13772 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:46:46.283+07:00  INFO 13772 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.019 seconds (process running for 5.766)
+2026-03-10T15:46:53.979+07:00  INFO 13772 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:46:53.980+07:00  INFO 13772 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:46:53.981+07:00  INFO 13772 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T15:47:24.278+07:00  INFO 13772 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:47:24.289+07:00  INFO 13772 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:47:24.293+07:00  INFO 13772 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:47:24.296+07:00  INFO 13772 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:47:24.299+07:00  INFO 13772 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T15:47:28.454+07:00  INFO 9748 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 9748 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T15:47:28.457+07:00  INFO 9748 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T15:47:29.359+07:00  INFO 9748 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T15:47:29.441+07:00  INFO 9748 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 5 JPA repository interfaces.
+2026-03-10T15:47:30.008+07:00  INFO 9748 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T15:47:30.023+07:00  INFO 9748 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T15:47:30.024+07:00  INFO 9748 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T15:47:30.076+07:00  INFO 9748 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1572 ms
+2026-03-10T15:47:30.288+07:00  INFO 9748 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T15:47:30.346+07:00  INFO 9748 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T15:47:30.840+07:00  INFO 9748 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T15:47:30.874+07:00  INFO 9748 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T15:47:30.963+07:00  INFO 9748 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ab268bd
+2026-03-10T15:47:30.965+07:00  INFO 9748 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T15:47:30.994+07:00  WARN 9748 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T15:47:31.013+07:00  INFO 9748 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T15:47:32.018+07:00  INFO 9748 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T15:47:32.028+07:00  INFO 9748 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:47:32.105+07:00  INFO 9748 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T15:47:32.393+07:00  WARN 9748 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T15:47:32.481+07:00  WARN 9748 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f91629a-6c7f-49d6-a831-d0c172a39b69
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T15:47:32.489+07:00  INFO 9748 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T15:47:33.036+07:00  INFO 9748 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T15:47:33.111+07:00  INFO 9748 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T15:47:33.119+07:00  INFO 9748 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.278 seconds (process running for 6.069)
+2026-03-10T15:47:39.358+07:00  INFO 9748 --- [agribank_e-contract] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T15:47:39.358+07:00  INFO 9748 --- [agribank_e-contract] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T15:47:39.359+07:00  INFO 9748 --- [agribank_e-contract] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T15:48:22.698+07:00  INFO 9748 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T15:48:22.709+07:00  INFO 9748 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T15:48:22.713+07:00  INFO 9748 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T15:48:22.715+07:00  INFO 9748 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T15:48:22.719+07:00  INFO 9748 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T16:40:30.598+07:00  INFO 8848 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 8848 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T16:40:30.601+07:00  INFO 8848 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T16:40:31.331+07:00  INFO 8848 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T16:40:31.403+07:00  INFO 8848 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2026-03-10T16:40:31.944+07:00  INFO 8848 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T16:40:31.959+07:00  INFO 8848 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T16:40:31.959+07:00  INFO 8848 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T16:40:32.008+07:00  INFO 8848 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1363 ms
+2026-03-10T16:40:32.206+07:00  INFO 8848 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T16:40:32.262+07:00  INFO 8848 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T16:40:32.738+07:00  INFO 8848 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T16:40:32.771+07:00  INFO 8848 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T16:40:32.855+07:00  INFO 8848 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@45f241df
+2026-03-10T16:40:32.857+07:00  INFO 8848 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T16:40:32.888+07:00  WARN 8848 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T16:40:32.915+07:00  INFO 8848 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T16:40:33.883+07:00  INFO 8848 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T16:40:33.891+07:00  INFO 8848 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:40:33.965+07:00  INFO 8848 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T16:40:34.253+07:00  WARN 8848 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T16:40:34.337+07:00  WARN 8848 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c5dbfa27-c9bc-42d9-825d-871349e2a8c2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T16:40:34.345+07:00  INFO 8848 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T16:40:34.850+07:00  INFO 8848 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T16:40:34.904+07:00  INFO 8848 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T16:40:34.909+07:00  INFO 8848 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.825 seconds (process running for 5.59)
+2026-03-10T16:41:01.570+07:00  INFO 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T16:41:01.571+07:00  INFO 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T16:41:01.572+07:00  INFO 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T16:41:01.739+07:00  INFO 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin]Create contract with data request: ContractDTO(contractCode=null, clientId=1, email=dangquang251203@gmail.com, branchId=1, loanAmount=10000000, loanTerm=10, interestRate=0.05, savingBookId=1, status=null, createdAt=null)
+2026-03-10T16:41:02.181+07:00  INFO 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : The saving book exists and the borrower is the correct person
+2026-03-10T16:41:02.252+07:00  WARN 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] o.m.jdbc.message.server.ErrorPacket      : Error: 1054-42S22: Unknown column 'expired_at' in 'INSERT INTO'
+2026-03-10T16:41:02.255+07:00  WARN 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1054, SQLState: 42S22
+2026-03-10T16:41:02.255+07:00  WARN 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] org.hibernate.orm.jdbc.error             : (conn=238) Unknown column 'expired_at' in 'INSERT INTO'
+2026-03-10T16:41:02.268+07:00 ERROR 8848 --- [agribank_e-contract] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement [(conn=238) Unknown column 'expired_at' in 'INSERT INTO'] [insert into otp (contract_code,created_at,email,expired_at,is_used,otp_code) values (?,?,?,?,?,?)]; SQL [insert into otp (contract_code,created_at,email,expired_at,is_used,otp_code) values (?,?,?,?,?,?)]] with root cause
+
+java.sql.SQLSyntaxErrorException: (conn=238) Unknown column 'expired_at' in 'INSERT INTO'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:309) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:403) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:196) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1411) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1350) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1269) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1193) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.7.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.7.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:103) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:45) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:84) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:145) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:89) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:73) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:49) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:689) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:672) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-7.0.5.jar:7.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy128.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:240) ~[spring-orm-7.0.5.jar:7.0.5]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:386) ~[spring-orm-7.0.5.jar:7.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy128.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664) ~[spring-data-jpa-4.0.3.jar:4.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.5.jar:7.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy142.save(Unknown Source) ~[na:na]
+	at com.agribank.e_contract.service.contract.ContractServiceImpl.createContract(ContractServiceImpl.java:55) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.5.jar:7.0.5]
+	at com.agribank.e_contract.service.contract.ContractServiceImpl$$SpringCGLIB$$0.createContract(<generated>) ~[classes/:na]
+	at com.agribank.e_contract.controller.ContractController.createContract(ContractController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-10T16:42:36.285+07:00  INFO 8848 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T16:42:36.294+07:00  INFO 8848 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T16:42:36.298+07:00  INFO 8848 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:42:36.300+07:00  INFO 8848 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T16:42:36.304+07:00  INFO 8848 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T16:42:38.713+07:00  INFO 8332 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 8332 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T16:42:38.715+07:00  INFO 8332 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T16:42:39.366+07:00  INFO 8332 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T16:42:39.434+07:00  INFO 8332 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 6 JPA repository interfaces.
+2026-03-10T16:42:39.948+07:00  INFO 8332 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T16:42:39.961+07:00  INFO 8332 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T16:42:39.961+07:00  INFO 8332 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T16:42:40.007+07:00  INFO 8332 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1251 ms
+2026-03-10T16:42:40.174+07:00  INFO 8332 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T16:42:40.235+07:00  INFO 8332 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T16:42:40.667+07:00  INFO 8332 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T16:42:40.697+07:00  INFO 8332 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T16:42:40.777+07:00  INFO 8332 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@24dc150c
+2026-03-10T16:42:40.779+07:00  INFO 8332 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T16:42:40.806+07:00  WARN 8332 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T16:42:40.823+07:00  INFO 8332 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T16:42:41.763+07:00  INFO 8332 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T16:42:41.772+07:00  INFO 8332 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:42:41.852+07:00  INFO 8332 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T16:42:42.147+07:00  WARN 8332 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T16:42:42.242+07:00  WARN 8332 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 42661d03-a961-4f93-a1a6-f76e6587c51a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T16:42:42.251+07:00  INFO 8332 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T16:42:42.767+07:00  INFO 8332 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T16:42:42.818+07:00  INFO 8332 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T16:42:42.823+07:00  INFO 8332 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.594 seconds (process running for 5.445)
+2026-03-10T16:42:53.374+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T16:42:53.375+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T16:42:53.376+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T16:42:53.568+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin]Create contract with data request: ContractDTO(contractCode=null, clientId=1, email=dangquang251203@gmail.com, branchId=1, loanAmount=10000000, loanTerm=10, interestRate=0.05, savingBookId=1, status=null, createdAt=null)
+2026-03-10T16:42:54.054+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : The saving book exists and the borrower is the correct person
+2026-03-10T16:42:54.141+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : OTP code for contract CT010101 is 479616
+2026-03-10T16:42:58.118+07:00  INFO 8332 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : Contract is created with code: CT010101
+2026-03-10T16:44:00.032+07:00  INFO 8332 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T16:44:00.044+07:00  INFO 8332 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T16:44:00.050+07:00  INFO 8332 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:44:00.053+07:00  INFO 8332 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T16:44:00.057+07:00  INFO 8332 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T16:45:44.877+07:00  INFO 12592 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 12592 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-10T16:45:44.880+07:00  INFO 12592 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T16:45:45.639+07:00  INFO 12592 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T16:45:45.713+07:00  INFO 12592 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 6 JPA repository interfaces.
+2026-03-10T16:45:46.257+07:00  INFO 12592 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T16:45:46.270+07:00  INFO 12592 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T16:45:46.271+07:00  INFO 12592 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T16:45:46.320+07:00  INFO 12592 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1398 ms
+2026-03-10T16:45:46.517+07:00  INFO 12592 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T16:45:46.567+07:00  INFO 12592 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T16:45:47.014+07:00  INFO 12592 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T16:45:47.046+07:00  INFO 12592 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T16:45:47.137+07:00  INFO 12592 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4990b335
+2026-03-10T16:45:47.140+07:00  INFO 12592 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T16:45:47.170+07:00  WARN 12592 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T16:45:47.188+07:00  INFO 12592 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T16:45:48.135+07:00  INFO 12592 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T16:45:48.145+07:00  INFO 12592 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:45:48.220+07:00  INFO 12592 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T16:45:48.489+07:00  WARN 12592 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T16:45:48.570+07:00  WARN 12592 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 657e4307-a3e4-4c0c-8a65-fc84be8eea8c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-10T16:45:48.577+07:00  INFO 12592 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-10T16:45:49.074+07:00  INFO 12592 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-10T16:45:49.132+07:00  INFO 12592 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T16:45:49.137+07:00  INFO 12592 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 4.759 seconds (process running for 5.493)
+2026-03-10T16:45:55.613+07:00  INFO 12592 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T16:45:55.623+07:00  INFO 12592 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T16:45:55.628+07:00  INFO 12592 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T16:45:55.630+07:00  INFO 12592 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T16:45:55.633+07:00  INFO 12592 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

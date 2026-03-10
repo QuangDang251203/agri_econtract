@@ -9,12 +9,14 @@ import com.agribank.e_contract.mapper.ContractMapper;
 import com.agribank.e_contract.repository.ContractRepository;
 import com.agribank.e_contract.repository.SavingBookRepository;
 import com.agribank.e_contract.response.CommonResponse;
+import com.agribank.e_contract.service.mail.MailService;
 import com.agribank.e_contract.utils.CommonUtils;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 
 @Service
 @RequiredArgsConstructor
@@ -23,6 +25,8 @@ public class ContractServiceImpl implements ContractService {
     public final ContractRepository contractRepo;
     public final SavingBookRepository savingBookRepo;
     public final ContractMapper contractMapper;
+    public final MailService mailService;
+    public final ContractServiceHelper contractHelper;
 
     public CommonResponse createContract(ContractDTO dto) {
         log.info("[Begin]Create contract with data request: {}", dto);
@@ -36,6 +40,7 @@ public class ContractServiceImpl implements ContractService {
         dto.setContractCode(generateCode);
         dto.setStatus(CommonConstant.PENDING_CONTRACT);
         contractRepo.save(contractMapper.toEntity(dto));
+        contractHelper.sendAndSaveOTP(dto);
         log.info("Contract is created with code: {}", generateCode);
         return CommonResponse.success();
     }
