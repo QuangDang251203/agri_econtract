@@ -14,7 +14,7 @@ public class BranchDTO {
     @NotBlank(message = "Branch Name is required")
     private String branchName;
 
-    @NotBlank(message = "Interest rate is required")
+    @NotNull(message = "Interest rate is required")
     @DecimalMin(value = "0.05", message = "Interest rate must be at least 5%")
     @DecimalMax(value = "0.06", message = "Interest rate must not exceed 6%")
     private float interestRate;
