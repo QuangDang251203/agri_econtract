@@ -3,7 +3,6 @@ package com.agribank.e_contract.mapper;
 import com.agribank.e_contract.dto.ContractCodeDTO;
 import com.agribank.e_contract.dto.ContractDTO;
 import com.agribank.e_contract.entity.Contract;
-import com.agribank.e_contract.entity.OTP;
 import com.agribank.e_contract.repository.BranchRepository;
 import com.agribank.e_contract.repository.ClientRepository;
 import com.agribank.e_contract.repository.ContractRepository;

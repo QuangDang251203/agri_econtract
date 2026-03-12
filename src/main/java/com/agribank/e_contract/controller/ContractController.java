@@ -17,8 +17,15 @@ public class ContractController {
     public CommonResponse createContract(@Valid @RequestBody ContractDTO dto) {
         return contractService.createContract(dto);
     }
-    @PostMapping("/updateStatus")
-    public CommonResponse updateStatus(@Valid @RequestBody UpdateContractDTO dto) {
-        return contractService.updateStatus(dto);
+    @PostMapping("/updateStatusFromManager")
+    public CommonResponse updateStatus( @RequestBody UpdateContractDTO dto) {
+        System.out.println("1111");
+        return contractService.updateStatusFromManager(dto);
+    }
+
+    @PostMapping("/signContract")
+    public CommonResponse signContract(@RequestParam String OtpCode,
+                                       @RequestParam String contract) {
+        return contractService.signContract(OtpCode, contract);
     }
 }
