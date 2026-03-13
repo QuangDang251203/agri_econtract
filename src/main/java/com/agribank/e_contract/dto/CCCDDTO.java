@@ -15,6 +15,9 @@ public class CCCDDTO {
     @Size(max = 12, min = 12, message = "CCCD Number must be 12 digits")
     private String CCCDNumber;
 
+    @NotBlank(message = "Representative is required")
+    private String representative;
+
     @NotBlank(message = "issuingLocation is required")
     private String issuingLocation;
 }

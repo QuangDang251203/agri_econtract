@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface ContractService {
     CommonResponse createContract(ContractDTO dto);
-    CommonResponse updateStatusFromManager(UpdateContractDTO dto);
+
     CommonResponse signContract(String OtpCode, String contractCode);
+    CommonResponse deleteContract(String contractCode);
 }

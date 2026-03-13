@@ -17,5 +17,8 @@ public class SavingBookDTO {
     private int status; // 0: inactive, 1: active, 2: closed
 
     @NotNull(message = "Client id is required")
-    private int clientId;
+    private int businessCode;
+
+    @NotNull(message = "Duration is required")
+    private int duration; // in months
 }

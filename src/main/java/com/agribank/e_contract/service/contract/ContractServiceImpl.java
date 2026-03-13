@@ -14,67 +14,34 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 
 
 @Service
 @RequiredArgsConstructor
 public class ContractServiceImpl implements ContractService {
-    public final Logger log = LoggerFactory.getLogger(ContractServiceImpl.class);
-    public final ContractRepository contractRepo;
-    public final SavingBookRepository savingBookRepo;
-    public final ContractMapper contractMapper;
-    public final ContractServiceHelper contractHelper;
-    public final StringRedisTemplate redisTemplate;
+    private final Logger log = LoggerFactory.getLogger(ContractServiceImpl.class);
+    private final ContractRepository contractRepo;
+    private final SavingBookRepository savingBookRepo;
+    private final ContractMapper contractMapper;
+    private final ContractServiceHelper contractHelper;
 
     public CommonResponse createContract(ContractDTO dto) {
         log.info("[Begin]Create contract with data request: {}", dto);
-        SavingBook savingBook = savingBookRepo.findById(dto.getSavingBookId());
-        if (savingBook.getClient().getId() != dto.getClientId()) {
-            throw new RuntimeException("Saving book does not belong to this client");
-        }
-        if (savingBook.getStatus() == CommonConstant.LOCKED_SAVING_BOOK) {
-            throw new RuntimeException("Saving book locked");
-        }
-        log.info("The saving book exists and the borrower is the correct person");
+        contractHelper.checkSavingBookIsValid(dto);
+        log.info("The saving book exists and is valid with id: {}", dto.getSavingBookId());
         ContractCodeDTO contractCode = contractMapper.createContractCode(dto);
         String generateCode = CommonUtils.generateContractCode(contractCode);
         dto.setContractCode(generateCode);
         dto.setStatus(CommonConstant.PENDING_CONTRACT);
+        dto.setCreatedAt(LocalDate.now());
         contractRepo.save(contractMapper.toEntity(dto));
         contractHelper.sendAndSaveOTP(dto);
         log.info("Contract is created with code: {}", generateCode);
         return CommonResponse.success();
     }
-
-    @Transactional
-    public CommonResponse updateStatusFromManager(UpdateContractDTO dto) {
-        log.info("[Begin]Update status from Manager with code contract: {}", dto.getContractCode());
-        ContractDTO contractDTO = contractMapper.toDTO(contractRepo.findByContractCode(dto.getContractCode()));
-        if (contractDTO == null) {
-            throw new RuntimeException("Contract not found with code: " + dto.getContractCode());
-        }
-        log.info("Contract is exist with code: {}", dto.getContractCode());
-
-        switch (contractDTO.getStatus()) {
-            case CommonConstant.PENDING_CONTRACT:
-                throw new RuntimeException("Contract is still pending, waiting for borrower to sign");
-            case CommonConstant.SIGNED_CONTRACT:
-                if (dto.getStatus() == CommonConstant.ACCEPT_CONTRACT) {
-                    contractDTO.setStatus(CommonConstant.ACCEPT_CONTRACT);
-                } else {
-                    contractDTO.setStatus(CommonConstant.REJECTED_CONTRACT);
-                }
-                break;
-            default:
-                throw new RuntimeException("Contract is already in final status");
-        }
-        log.info("Contract is updated to status: {}", contractDTO.getStatus());
-        contractRepo.save(contractMapper.toEntity(contractDTO));
-        return CommonResponse.success();
-    }
-
     public CommonResponse signContract(String OtpCode, String contractCode) {
         log.info("[Begin] SignContract with contractCode: {}", contractCode);
         ContractDTO contractDTO = contractMapper.toDTO(contractRepo.findByContractCode(contractCode));
@@ -94,5 +61,20 @@ public class ContractServiceImpl implements ContractService {
         return CommonResponse.success();
     }
 
-
+    public CommonResponse deleteContract(String contractCode) {
+        log.info("[Begin] Delete contract with contractCode: {}", contractCode);
+        ContractDTO contractDTO = contractMapper.toDTO(contractRepo.findByContractCode(contractCode));
+        if (contractDTO == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+        if (contractDTO.getStatus() == CommonConstant.SIGNED_CONTRACT
+                || contractDTO.getStatus() == CommonConstant.ACCEPT_CONTRACT
+                || contractDTO.getStatus() == CommonConstant.REJECTED_CONTRACT) {
+            throw new RuntimeException("Contract is already signed, cannot delete");
+        }
+        contractDTO.setStatus(CommonConstant.DELETED_CONTRACT);
+        contractRepo.save(contractMapper.toEntity(contractDTO));
+        log.info("[End] Delete contract successfully with contractCode: {}", contractCode);
+        return CommonResponse.success();
+    }
 }

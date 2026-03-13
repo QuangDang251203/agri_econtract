@@ -6,10 +6,13 @@ import java.security.SecureRandom;
 
 public class CommonUtils {
     public static String generateContractCode(ContractCodeDTO dto) {
-        int clientId = dto.getClientId();
-        int branchId = dto.getBranchId();
+        String businessCode = dto.getBusinessCode();
         int savingBookId = dto.getSavingBookId();
-        return String.format("CT%02d%02d%02d", clientId, branchId, savingBookId);
+
+        String businessPart = businessCode.substring(0, 4);
+        String savingPart = String.format("%02d", savingBookId);
+
+        return "CT" + businessPart + savingPart;
     }
     public static String generateOTPCode() {
         SecureRandom random = new SecureRandom();

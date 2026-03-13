@@ -1,5 +1,6 @@
 package com.agribank.e_contract.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,7 +14,8 @@ public class CCCD {
 
     private String cccdNumber;
     private String issuingLocation;
-
+    private String representative;
     @OneToOne(mappedBy = "cccd")
+    @JsonIgnore
     private Client client;
 }

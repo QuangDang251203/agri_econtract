@@ -14,8 +14,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class ClientDTO {
 
-    @NotBlank(message = "Full name is required")
-    private String fullName;
+    @NotBlank(message = "Business name is required")
+    private String businessName;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email format invalid")
@@ -24,9 +24,6 @@ public class ClientDTO {
     @NotBlank(message = "Phone is required")
     @Size(max = 10, min = 10, message = "Phone must be 10 digits")
     private String phone;
-
-
-    private Date birthDate;
 
     @NotBlank(message = "Address is required")
     private String address;

@@ -16,21 +16,16 @@ public class Contract {
     private String contractCode;
 
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "business_code")
     private Client client;
-
-    @ManyToOne
-    @JoinColumn(name = "branch_id")
-    private Branch branch;
 
     @ManyToOne
     @JoinColumn(name = "saving_book_id")
     private SavingBook savingBook;
-
-    private String email;
     private int status;
     private BigDecimal loanAmount;
-    private int loanTerm; // in months
+    private int loanTerm;
+    private String paymentMethod;
     private float interestRate;
     private LocalDate createdAt;
 

@@ -9,8 +9,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContractCodeDTO {
-    private int clientId;
-    private int branchId;
+    private String businessCode;
     private int savingBookId;
     private LocalDate createdAt;
 }

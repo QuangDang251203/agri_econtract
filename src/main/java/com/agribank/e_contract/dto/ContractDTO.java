@@ -19,16 +19,11 @@ public class ContractDTO {
 
     private String contractCode;
 
-    @NotNull(message = "Client id is required")
-    private int clientId;
-
-    @NotBlank(message = "Email is required")
-    private String email;
-
-    @NotNull(message = "Branch id is required")
-    private int branchId;
+    @NotBlank(message = "Business code id is required")
+    private String businessCode;
 
     @NotNull(message = "Loan Amount is required")
+    @DecimalMin(value = "0.01", message = "Loan amount must be greater than 0")
     private BigDecimal loanAmount;
 
     @NotNull(message = "Loan Term is required")
@@ -42,6 +37,10 @@ public class ContractDTO {
     @NotNull(message = "Saving Book id is required")
     private int savingBookId;
 
+    @NotBlank(message = "Payment method is required")
+    private String paymentMethod;
+
     private Integer status;
     private LocalDate createdAt;
+
 }
