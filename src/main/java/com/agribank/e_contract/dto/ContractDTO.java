@@ -40,6 +40,9 @@ public class ContractDTO {
     @NotBlank(message = "Payment method is required")
     private String paymentMethod;
 
+    @NotNull(message = "Bank account id is required")
+    private int bankAccountId;
+
     private Integer status;
     private LocalDate createdAt;
 

@@ -20,4 +20,7 @@ public class CCCDDTO {
 
     @NotBlank(message = "issuingLocation is required")
     private String issuingLocation;
+
+    @NotBlank(message = "dateIssued is required")
+    private String dateIssued;
 }

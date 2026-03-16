@@ -3,6 +3,7 @@ package com.agribank.e_contract.service.contract;
 import com.agribank.e_contract.constant.CommonConstant;
 import com.agribank.e_contract.constant.MailConstant;
 import com.agribank.e_contract.dto.ContractDTO;
+import com.agribank.e_contract.dto.ContractRequest;
 import com.agribank.e_contract.entity.SavingBook;
 import com.agribank.e_contract.repository.ClientRepository;
 import com.agribank.e_contract.repository.SavingBookRepository;
@@ -15,6 +16,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -32,7 +37,7 @@ public class ContractServiceHelper {
         redisTemplate.opsForValue().set(
                 key,
                 otp,
-                2,
+                30,
                 TimeUnit.MINUTES
         );
         mailService.sendMail(clientRepo.findClientByBusinessCode(dto.getBusinessCode()).getEmail(),
@@ -68,5 +73,53 @@ public class ContractServiceHelper {
         if (dto.getLoanAmount().compareTo(limit) > 0) {
             throw new RuntimeException("Loan amount must be less than 90% of saving book balance");
         }
+    }
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    public Map<String, Object> buildTemplateData(ContractRequest request) {
+        LocalDate currentDate = LocalDate.now();
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("ten_ben_vay", request.getBusinessName());
+        data.put("dia_chi", request.getAddress());
+        data.put("so_dien_thoai", request.getPhoneNumber());
+        data.put("ma_so_doanh_nghiep", request.getBusinessCode());
+        data.put("so_tai_khoan", request.getBankAccountNumber());
+        data.put("ngay_lap_hop_dong", formatDate(currentDate));
+        data.put("ten_chi_nhanh", request.getBranchName());
+        data.put("ten_nguoi_dai_dien_ben_vay", request.getRepresentative());
+        data.put("chuc_vu_nguoi_dai_dien_ben_vay", "Giám đốc");
+        data.put("so_CCCD", request.getCccdNumber());
+        data.put("noi_cap_CCCD", request.getIssuingLocation());
+        data.put("ngay_cap_CCCD", formatDate(request.getDateIssued()));
+        data.put("so_tien_vay", request.getLoanAmount().stripTrailingZeros().toPlainString());
+        data.put("so_tien_vay_bang_chu", request.getLoanAmountInWords());
+        data.put("thoi_han_vay", request.getLoanTerm());
+        data.put("lai_suat", request.getInterestRate());
+        data.put("seri_so_tiet_kiem", request.getSavingBookId());
+        data.put("so_tien_gui_tiet_kiem", request.getBalance());
+        data.put("so_tien_gui_tiet_kiem_bang_chu", request.getBalenceInWords());
+        data.put("ngay_phat_hanh", formatDate(request.getDateOfDeposit()));
+        data.put("ngay_den_han", formatDate(calculateMaturityDate(request)));
+        return data;
+    }
+
+    public LocalDate calculateMaturityDate(ContractRequest request) {
+        if (request.getDateOfDeposit() == null) {
+            return null;
+        }
+        return request.getDateOfDeposit().plusMonths(request.getDuration());
+    }
+
+    public String formatDate(LocalDate date) {
+        return date == null ? "" : date.format(FORMATTER);
+    }
+
+    public String generateFileName() {
+        return "hop_dong_" + System.currentTimeMillis() + ".docx";
+    }
+
+    public String getSavePath() {
+        return "C:/Users/Hi/OneDrive - utt.vn/CÔNG VIỆC/Template_demo/";
     }
 }

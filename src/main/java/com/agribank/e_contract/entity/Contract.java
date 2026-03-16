@@ -27,6 +27,11 @@ public class Contract {
     private int loanTerm;
     private String paymentMethod;
     private float interestRate;
+
+    @OneToOne
+    @JoinColumn(name = "bank_account_id")
+    private BankAccount bankAccount;
+
     private LocalDate createdAt;
 
     @PrePersist
