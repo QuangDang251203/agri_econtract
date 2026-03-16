@@ -26,12 +26,11 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 public class ContractServiceHelper {
     public final Logger log = LoggerFactory.getLogger(ContractServiceHelper.class);
-    private final MailService mailService;
     private final SavingBookRepository savingBookRepo;
     private final RedisTemplate<String, String> redisTemplate;
     private final ClientRepository clientRepo;
 
-    public void sendAndSaveOTP(ContractDTO dto) {
+    public void SaveOTP(ContractDTO dto) {
         String otp = CommonUtils.generateOTPCode();
         String key = "otp:contract:" + dto.getContractCode();
         redisTemplate.opsForValue().set(
@@ -40,8 +39,7 @@ public class ContractServiceHelper {
                 30,
                 TimeUnit.MINUTES
         );
-        mailService.sendMail(clientRepo.findClientByBusinessCode(dto.getBusinessCode()).getEmail(),
-                MailConstant.SUBJECT, MailConstant.CONTENT + otp);
+
     }
 
     public void verifyOTP(String contractCode, String otpCode) {
@@ -74,6 +72,7 @@ public class ContractServiceHelper {
             throw new RuntimeException("Loan amount must be less than 90% of saving book balance");
         }
     }
+
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public Map<String, Object> buildTemplateData(ContractRequest request) {
@@ -97,7 +96,7 @@ public class ContractServiceHelper {
         data.put("thoi_han_vay", request.getLoanTerm());
         data.put("lai_suat", request.getInterestRate());
         data.put("seri_so_tiet_kiem", request.getSavingBookId());
-        data.put("so_tien_gui_tiet_kiem", request.getBalance());
+        data.put("so_tien_gui_tiet_kiem", request.getBalance().stripTrailingZeros().toPlainString());
         data.put("so_tien_gui_tiet_kiem_bang_chu", request.getBalenceInWords());
         data.put("ngay_phat_hanh", formatDate(request.getDateOfDeposit()));
         data.put("ngay_den_han", formatDate(calculateMaturityDate(request)));
@@ -115,11 +114,12 @@ public class ContractServiceHelper {
         return date == null ? "" : date.format(FORMATTER);
     }
 
-    public String generateFileName() {
-        return "hop_dong_" + System.currentTimeMillis() + ".docx";
-    }
-
     public String getSavePath() {
         return "C:/Users/Hi/OneDrive - utt.vn/CÔNG VIỆC/Template_demo/";
+    }
+
+    public String getOTP(String contractCode) {
+        String key = "otp:contract:" + contractCode;
+        return (String) redisTemplate.opsForValue().get(key);
     }
 }

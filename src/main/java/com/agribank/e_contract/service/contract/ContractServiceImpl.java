@@ -16,7 +16,6 @@ import com.agribank.e_contract.repository.SavingBookRepository;
 import com.agribank.e_contract.response.CommonResponse;
 import com.agribank.e_contract.utils.CommonUtils;
 import com.deepoove.poi.XWPFTemplate;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,10 +25,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.Map;
 
@@ -45,7 +42,7 @@ public class ContractServiceImpl implements ContractService {
     private final BankAccountRepository bankAccountRepository;
     private final ClientRepository clientRepository;
 
-    public CommonResponse createContract(ContractDTO dto) {
+    public String createContract(ContractDTO dto) {
         log.info("[Begin]Create contract with data request: {}", dto);
         contractHelper.checkSavingBookIsValid(dto);
         log.info("The saving book exists and is valid with id: {}", dto.getSavingBookId());
@@ -55,10 +52,11 @@ public class ContractServiceImpl implements ContractService {
         dto.setStatus(CommonConstant.PENDING_CONTRACT);
         dto.setCreatedAt(LocalDate.now());
         contractRepo.save(contractMapper.toEntity(dto));
-        contractHelper.sendAndSaveOTP(dto);
+        contractHelper.SaveOTP(dto);
         log.info("Contract is created with code: {}", generateCode);
-        return CommonResponse.success();
+        return generateCode;
     }
+
     public CommonResponse signContract(String OtpCode, String contractCode) {
         log.info("[Begin] SignContract with contractCode: {}", contractCode);
         ContractDTO contractDTO = contractMapper.toDTO(contractRepo.findByContractCode(contractCode));
@@ -94,40 +92,114 @@ public class ContractServiceImpl implements ContractService {
         log.info("[End] Delete contract successfully with contractCode: {}", contractCode);
         return CommonResponse.success();
     }
+
     public ResponseEntity<byte[]> generateAndDownloadContract(String contractCode) throws IOException {
         Contract contract = contractRepo.findByContractCode(contractCode);
         if (contract == null) {
             throw new RuntimeException("Contract not found with code: " + contractCode);
         }
+
         BankAccount bankAccount = bankAccountRepository.findById(contract.getBankAccount().getId());
         SavingBook savingBook = savingBookRepo.findById(contract.getSavingBook().getId());
         Client client = clientRepository.findClientByBusinessCode(contract.getClient().getBusinessCode());
+        if (client == null) {
+            throw new RuntimeException("Client not found with business code: " + contract.getClient().getBusinessCode());
+        }
+
         ContractRequest request = contractMapper.toContractRequest(contract, client, savingBook, bankAccount);
         Map<String, Object> data = contractHelper.buildTemplateData(request);
+
         ClassPathResource resource = new ClassPathResource("templates/Template_hop_dong_vay.docx");
         String savePath = contractHelper.getSavePath();
-        String fileName = contractHelper.generateFileName();
-
         File dir = new File(savePath);
         if (!dir.exists()) {
             dir.mkdirs();
         }
 
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream();
-             FileOutputStream fos = new FileOutputStream(new File(savePath + fileName))) {
+        String baseFileName = "hop_dong_" + System.currentTimeMillis();
+        File docxFile = new File(savePath + baseFileName + ".docx");
+        File pdfFile = new File(savePath + baseFileName + ".pdf");
 
-            XWPFTemplate template = XWPFTemplate.compile(resource.getInputStream()).render(data);
-            template.write(out);
-            template.write(fos);
-            template.close();
+        try {
+            // 1) Render template ra DOCX
+            try (FileOutputStream fos = new FileOutputStream(docxFile)) {
+                XWPFTemplate template = XWPFTemplate.compile(resource.getInputStream()).render(data);
+                template.write(fos);
+                template.close();
+            }
 
-            byte[] bytes = out.toByteArray();
+            // 2) Convert DOCX -> PDF
+            convertDocxToPdf(docxFile, dir);
+
+            if (!pdfFile.exists()) {
+                throw new IOException("PDF conversion failed: output file not found");
+            }
+
+            // 3) Đọc PDF và trả về
+            byte[] pdfBytes = Files.readAllBytes(pdfFile.toPath());
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + fileName)
-                    .contentType(MediaType.parseMediaType(
-                            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
-                    .body(bytes);
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + pdfFile.getName())
+                    .header("contractCode", contractCode)
+                    .contentType(MediaType.APPLICATION_PDF)
+                    .body(pdfBytes);
+
+        } finally {
+            // Nếu muốn giữ file trên server thì bỏ phần xóa
+            if (docxFile.exists()) {
+                docxFile.delete();
+            }
+            // Nếu muốn giữ PDF để chèn chữ ký sau này thì KHÔNG xóa pdfFile
+            // Nếu chỉ download xong là xóa thì mở dòng dưới:
+            // if (pdfFile.exists()) pdfFile.delete();
         }
+    }
+
+    private void convertDocxToPdf(File docxFile, File outputDir) throws IOException {
+        // Đổi path này theo máy bạn
+        String sofficePath = "C:/Program Files/LibreOffice/program/soffice.exe";
+
+        ProcessBuilder processBuilder = new ProcessBuilder(
+                sofficePath,
+                "--headless",
+                "--convert-to", "pdf",
+                "--outdir", outputDir.getAbsolutePath(),
+                docxFile.getAbsolutePath()
+        );
+
+        processBuilder.redirectErrorStream(true);
+
+        Process process = processBuilder.start();
+
+        String output;
+        try (InputStream is = process.getInputStream()) {
+            output = new String(is.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8);
+        }
+
+        try {
+            int exitCode = process.waitFor();
+            if (exitCode != 0) {
+                throw new IOException("Convert DOCX to PDF failed. Exit code: " + exitCode + "\nLog: " + output);
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new IOException("DOCX to PDF conversion interrupted", e);
+        }
+    }
+
+    public String moneyToWords(long amount) {
+        return CommonUtils.numberToWords(amount);
+    }
+
+    public String SendOTP(String contractCode) {
+        ContractDTO contractDTO = contractMapper.toDTO(contractRepo.findByContractCode(contractCode));
+        if (contractDTO == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+        String otp = contractHelper.getOTP(contractCode);
+        if (contractDTO.getStatus() != CommonConstant.PENDING_CONTRACT) {
+            throw new RuntimeException("Contract is not in pending status");
+        }
+        return "OTP code for contract " + contractCode + " is: " + otp;
     }
 }

@@ -10,8 +10,10 @@ import java.io.IOException;
 
 @Service
 public interface ContractService {
-    CommonResponse createContract(ContractDTO dto);
+    String createContract(ContractDTO dto);
     ResponseEntity<byte[]> generateAndDownloadContract(String contractCode) throws IOException;
     CommonResponse signContract(String OtpCode, String contractCode);
     CommonResponse deleteContract(String contractCode);
+    String moneyToWords(long amount);
+    String SendOTP(String contractCode);
 }

@@ -9,18 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+
 @RestController
 @RequestMapping("/api/contract")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000",
-        allowCredentials = "true")
+@CrossOrigin(origins = "http://localhost:3000", exposedHeaders = {"contractCode", "Contract-Code", "X-Contract-Code"})
+
 public class ContractController {
     public final ContractService contractService;
-
-    @PostMapping("/createContract")
-    public CommonResponse createContract(@Valid @RequestBody ContractDTO dto) {
-        return contractService.createContract(dto);
-    }
 
     @PostMapping("/signContract")
     public CommonResponse signContract(@RequestParam String OtpCode,
@@ -33,9 +29,20 @@ public class ContractController {
         return contractService.deleteContract(contractCode);
     }
 
-    @PostMapping("/generate-and-download/{contractCode}")
-    public ResponseEntity<byte[]> generateAndDownloadContract(@PathVariable String contractCode ) throws IOException {
-        return contractService.generateAndDownloadContract(contractCode);
+    @PostMapping("/createAndGenerateContract")
+    public ResponseEntity<byte[]> createAndGenerateContract(@Valid @RequestBody ContractDTO dto) throws IOException {
+        contractService.createContract(dto);
+        return contractService.generateAndDownloadContract(dto.getContractCode());
+    }
+
+    @PostMapping("/money-to-words")
+    public String moneyToWords(@RequestParam long amount) {
+        return contractService.moneyToWords(amount);
+    }
+
+    @PostMapping("/send-otp")
+    public String sendOTP(@RequestParam String contractCode) {
+        return contractService.SendOTP(contractCode);
     }
 }
 

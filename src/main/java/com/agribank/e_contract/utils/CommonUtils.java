@@ -39,7 +39,7 @@ public class CommonUtils {
             unitIndex++;
         }
 
-        return result.trim() + " đồng";
+        return result.replaceAll("\\s+", " ").trim() + " đồng";
     }
 
     private static String convertThreeDigits(int number) {
