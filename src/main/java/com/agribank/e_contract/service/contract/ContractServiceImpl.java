@@ -4,16 +4,20 @@ import com.agribank.e_contract.constant.CommonConstant;
 import com.agribank.e_contract.dto.ContractCodeDTO;
 import com.agribank.e_contract.dto.ContractDTO;
 import com.agribank.e_contract.dto.ContractRequest;
+import com.agribank.e_contract.dto.FileContractDTO;
 import com.agribank.e_contract.entity.BankAccount;
 import com.agribank.e_contract.entity.Client;
 import com.agribank.e_contract.entity.Contract;
 import com.agribank.e_contract.entity.SavingBook;
 import com.agribank.e_contract.mapper.ContractMapper;
+import com.agribank.e_contract.mapper.FileContractMapper;
 import com.agribank.e_contract.repository.BankAccountRepository;
 import com.agribank.e_contract.repository.ClientRepository;
 import com.agribank.e_contract.repository.ContractRepository;
+import com.agribank.e_contract.repository.FileContractRepository;
 import com.agribank.e_contract.repository.SavingBookRepository;
 import com.agribank.e_contract.response.CommonResponse;
+import com.agribank.e_contract.response.ResponseList;
 import com.agribank.e_contract.utils.CommonUtils;
 import com.deepoove.poi.XWPFTemplate;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +33,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.Map;
+import java.util.List;
 
 
 @Service
@@ -41,13 +46,15 @@ public class ContractServiceImpl implements ContractService {
     private final ContractServiceHelper contractHelper;
     private final BankAccountRepository bankAccountRepository;
     private final ClientRepository clientRepository;
+    private final FileContractRepository fileContractRepository;
+    private final FileContractMapper filePathMapper;
 
     public String createContract(ContractDTO dto) {
         log.info("[Begin]Create contract with data request: {}", dto);
         contractHelper.checkSavingBookIsValid(dto);
         log.info("The saving book exists and is valid with id: {}", dto.getSavingBookId());
         ContractCodeDTO contractCode = contractMapper.createContractCode(dto);
-        String generateCode = CommonUtils.generateContractCode(contractCode);
+        String generateCode = CommonUtils.generateContractCode();
         dto.setContractCode(generateCode);
         dto.setStatus(CommonConstant.PENDING_CONTRACT);
         dto.setCreatedAt(LocalDate.now());
@@ -135,6 +142,13 @@ public class ContractServiceImpl implements ContractService {
                 throw new IOException("PDF conversion failed: output file not found");
             }
 
+            // Persist generated file metadata so downstream features can track contract files.
+            FileContractDTO fileContractDTO = new FileContractDTO();
+            fileContractDTO.setContractCode(contractCode);
+            fileContractDTO.setFilePath(pdfFile.getAbsolutePath());
+            fileContractDTO.setFileType("pdf");
+            fileContractRepository.save(filePathMapper.toEntity(fileContractDTO));
+
             // 3) Đọc PDF và trả về
             byte[] pdfBytes = Files.readAllBytes(pdfFile.toPath());
 
@@ -145,13 +159,9 @@ public class ContractServiceImpl implements ContractService {
                     .body(pdfBytes);
 
         } finally {
-            // Nếu muốn giữ file trên server thì bỏ phần xóa
             if (docxFile.exists()) {
                 docxFile.delete();
             }
-            // Nếu muốn giữ PDF để chèn chữ ký sau này thì KHÔNG xóa pdfFile
-            // Nếu chỉ download xong là xóa thì mở dòng dưới:
-            // if (pdfFile.exists()) pdfFile.delete();
         }
     }
 
@@ -201,5 +211,19 @@ public class ContractServiceImpl implements ContractService {
             throw new RuntimeException("Contract is not in pending status");
         }
         return "OTP code for contract " + contractCode + " is: " + otp;
+    }
+
+    public ResponseList<Contract> getContractByBusinessCode(String businessCode) {
+        log.info("[Begin] Get contract by business code: {}", businessCode);
+        List<Contract> contracts = contractRepo.findByClientBusinessCode(businessCode);
+        log.info("[End] Get {} contracts by business code: {}", contracts.size(), businessCode);
+        return ResponseList.success(contracts);
+    }
+
+    public ResponseList<Contract> getAllContracts() {
+        log.info("[Begin] Get all contracts");
+        List<Contract> contracts = contractRepo.findAll();
+        log.info("[End] Get {} contracts", contracts.size());
+        return ResponseList.success(contracts);
     }
 }

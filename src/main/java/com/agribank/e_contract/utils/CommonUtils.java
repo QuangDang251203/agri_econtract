@@ -5,14 +5,9 @@ import com.agribank.e_contract.dto.ContractCodeDTO;
 import java.security.SecureRandom;
 
 public class CommonUtils {
-    public static String generateContractCode(ContractCodeDTO dto) {
-        String businessCode = dto.getBusinessCode();
-        int savingBookId = dto.getSavingBookId();
-
-        String businessPart = businessCode.substring(0, 4);
-        String savingPart = String.format("%02d", savingBookId);
-
-        return "CT" + businessPart + savingPart;
+    public static String generateContractCode() {
+        String generateRandomNumber = String.format("%06d", new SecureRandom().nextInt(1000000));
+        return "CT" + generateRandomNumber;
     }
     public static String generateOTPCode() {
         SecureRandom random = new SecureRandom();

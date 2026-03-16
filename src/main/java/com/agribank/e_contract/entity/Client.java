@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "business_code")
     private String businessCode;
 
     private String businessName;
