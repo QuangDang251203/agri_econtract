@@ -1,17 +1,22 @@
 package com.agribank.e_contract.controller;
 
 import com.agribank.e_contract.dto.ContractDTO;
+import com.agribank.e_contract.dto.ContractDetailDTO;
+import com.agribank.e_contract.dto.AllContractDTO;
 import com.agribank.e_contract.entity.Contract;
 import com.agribank.e_contract.response.CommonResponse;
 import com.agribank.e_contract.response.ResponseList;
+import com.agribank.e_contract.response.ResponseObject;
 import com.agribank.e_contract.service.contract.ContractService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/contract")
@@ -25,6 +30,13 @@ public class ContractController {
     public CommonResponse signContract(@RequestParam String OtpCode,
                                        @RequestParam String contract) {
         return contractService.signContract(OtpCode, contract);
+    }
+
+    @PostMapping(value = "/sign-with-signature", consumes = "multipart/form-data")
+    public CommonResponse signWithSignature(@RequestParam String contractCode,
+                                            @RequestParam String otpCode,
+                                            @RequestPart("signatureFile") org.springframework.web.multipart.MultipartFile signatureFile) throws IOException {
+        return contractService.signContractWithSignature(contractCode, otpCode, signatureFile);
     }
 
     @PutMapping("/deleteContract/{contractCode}")
@@ -54,9 +66,25 @@ public class ContractController {
     }
 
     @PostMapping("/getAllContracts")
-    public ResponseList<Contract> getAllContracts() {
+    public ResponseList<AllContractDTO> getAllContracts() {
         return contractService.getAllContracts();
     }
+
+    @GetMapping("/getContractDetailByContractCode/{contractCode}")
+    public ResponseObject<ContractDetailDTO> getContractDetailByContractCode(@PathVariable String contractCode) throws IOException {
+        return contractService.getContractDetailByContractCode(contractCode);
+    }
+
+    @GetMapping("/getContractFileByContractCode/{contractCode}")
+    public ResponseEntity<Resource> getContractFileByContractCode(@PathVariable String contractCode) throws Exception {
+        Resource resource = contractService.getContractFileResource(contractCode);
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_PDF)
+                .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"contract.pdf\"")
+                .body(resource);
+    }
+
 }
 
 

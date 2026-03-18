@@ -17,8 +17,8 @@ public class FileContract {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "contract_code")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "contract_code", referencedColumnName = "contract_code")
     private Contract contract;
 
     private String filePath;

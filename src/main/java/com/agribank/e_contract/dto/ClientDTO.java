@@ -13,6 +13,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClientDTO {
+    @NotBlank(message = "Business code is required")
+    private String businessCode;
 
     @NotBlank(message = "Business name is required")
     private String businessName;

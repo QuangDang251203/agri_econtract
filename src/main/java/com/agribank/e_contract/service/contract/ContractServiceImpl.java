@@ -1,14 +1,8 @@
 package com.agribank.e_contract.service.contract;
 
 import com.agribank.e_contract.constant.CommonConstant;
-import com.agribank.e_contract.dto.ContractCodeDTO;
-import com.agribank.e_contract.dto.ContractDTO;
-import com.agribank.e_contract.dto.ContractRequest;
-import com.agribank.e_contract.dto.FileContractDTO;
-import com.agribank.e_contract.entity.BankAccount;
-import com.agribank.e_contract.entity.Client;
-import com.agribank.e_contract.entity.Contract;
-import com.agribank.e_contract.entity.SavingBook;
+import com.agribank.e_contract.dto.*;
+import com.agribank.e_contract.entity.*;
 import com.agribank.e_contract.mapper.ContractMapper;
 import com.agribank.e_contract.mapper.FileContractMapper;
 import com.agribank.e_contract.repository.BankAccountRepository;
@@ -18,22 +12,34 @@ import com.agribank.e_contract.repository.FileContractRepository;
 import com.agribank.e_contract.repository.SavingBookRepository;
 import com.agribank.e_contract.response.CommonResponse;
 import com.agribank.e_contract.response.ResponseList;
+import com.agribank.e_contract.response.ResponseObject;
 import com.agribank.e_contract.utils.CommonUtils;
 import com.deepoove.poi.XWPFTemplate;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.net.MalformedURLException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.time.LocalDate;
+import java.util.Base64;
 import java.util.Map;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -79,6 +85,7 @@ public class ContractServiceImpl implements ContractService {
         SavingBook savingBook = savingBookRepo.findById(contractDTO.getSavingBookId());
         savingBook.setStatus(CommonConstant.LOCKED_SAVING_BOOK);
         savingBookRepo.save(savingBook);
+
         log.info("[End] Sign contract successfully with contractCode: {}", contractCode);
         return CommonResponse.success();
     }
@@ -220,10 +227,133 @@ public class ContractServiceImpl implements ContractService {
         return ResponseList.success(contracts);
     }
 
-    public ResponseList<Contract> getAllContracts() {
+    public ResponseList<AllContractDTO> getAllContracts() {
         log.info("[Begin] Get all contracts");
         List<Contract> contracts = contractRepo.findAll();
         log.info("[End] Get {} contracts", contracts.size());
-        return ResponseList.success(contracts);
+
+        List<AllContractDTO> data = new java.util.ArrayList<>();
+        for (Contract contract : contracts) {
+            CCCD cccd = null;
+            if (contract.getClient() != null) {
+                cccd = contract.getClient().getCccd();
+            }
+            data.add(new AllContractDTO(contract, cccd));
+        }
+
+        return ResponseList.success(data);
+    }
+
+    public ResponseObject<ContractDetailDTO> getContractDetailByContractCode(String contractCode) throws IOException {
+        log.info("[Begin] Get contract detail by contractCode: {}", contractCode);
+
+        Contract contract = contractRepo.findByContractCode(contractCode);
+        if (contract == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+        Client client = clientRepository.findClientByBusinessCode(contract.getClient().getBusinessCode());
+        if (client == null) {
+            throw new RuntimeException("Client not found with business code: " + contract.getClient().getBusinessCode());
+        }
+        CCCD cccd = client.getCccd();
+        if (cccd == null) {
+            throw new RuntimeException("CCCD not found for client with business code: " + client.getBusinessCode());
+        }
+        FileContract fileContract = fileContractRepository.findFileByPriority(contractCode)
+                .orElseThrow(() -> new RuntimeException("No contract file found for contract code: " + contractCode));
+
+        Resource resource = getContractFileResource(contractCode);
+        byte[] fileBytes;
+        try (InputStream inputStream = resource.getInputStream()) {
+            fileBytes = inputStream.readAllBytes();
+        }
+
+        Path filePath = Paths.get(fileContract.getFilePath());
+        String mimeType = Files.probeContentType(filePath);
+        if (mimeType == null) {
+            mimeType = MediaType.APPLICATION_PDF_VALUE;
+        }
+
+        FileContractDTO fileInfo = new FileContractDTO(
+                fileContract.getId(),
+                fileContract.getFilePath(),
+                fileContract.getFileType(),
+                contractCode,
+                fileContract.getCreatedAt()
+        );
+
+        ContractDetailDTO contractDetailDTO = new ContractDetailDTO();
+        contractDetailDTO.setContractInfo(contractMapper.toDTO(contract));
+        contractDetailDTO.setFileInfo(fileInfo);
+        contractDetailDTO.setClientInfo(client);
+        contractDetailDTO.setCccdInfo(cccd);
+        contractDetailDTO.setFileName(filePath.getFileName().toString());
+        contractDetailDTO.setMimeType(mimeType);
+        contractDetailDTO.setFileContentBase64(Base64.getEncoder().encodeToString(fileBytes));
+
+        log.info("[End] Get contract detail by contractCode successfully: {}", contractCode);
+        return ResponseObject.success(contractDetailDTO);
+    }
+
+    @Transactional
+    public CommonResponse signContractWithSignature(String contractCode,
+                                                    String otpCode,
+                                                    MultipartFile signatureFile) throws IOException {
+        log.info("[Begin] Sign contract with signature - contractCode: {}", contractCode);
+
+        Contract contract = contractRepo.findByContractCode(contractCode);
+        if (contract == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+
+        if (contract.getStatus() != CommonConstant.PENDING_CONTRACT) {
+            throw new RuntimeException("Contract is not in pending status");
+        }
+
+        contractHelper.verifyOTP(contractCode, otpCode);
+
+        Optional<FileContract> latestPdfOpt =
+                fileContractRepository.findTopByContract_ContractCodeAndFileTypeOrderByIdDesc(contractCode, "pdf");
+
+        FileContract latestPdf = latestPdfOpt
+                .orElseThrow(() -> new RuntimeException("Pending PDF not found for contract: " + contractCode));
+
+        byte[] signatureBytes = signatureFile.getBytes();
+
+        String signedPdfPath = contractHelper.buildSignedPdfPath(latestPdf.getFilePath());
+        contractHelper.stampSignatureOnPdf(latestPdf.getFilePath(), signatureBytes, signedPdfPath);
+
+        FileContract signedFile = new FileContract();
+        signedFile.setContract(contract);
+        signedFile.setFilePath(signedPdfPath);
+        signedFile.setFileType("signed_pdf");
+        fileContractRepository.save(signedFile);
+
+        contract.setStatus(CommonConstant.SIGNED_CONTRACT);
+        contractRepo.save(contract);
+
+        SavingBook savingBook = savingBookRepo.findById(contract.getSavingBook().getId());
+        savingBook.setStatus(CommonConstant.LOCKED_SAVING_BOOK);
+        savingBookRepo.save(savingBook);
+
+        log.info("[End] Sign contract successfully - contractCode: {}", contractCode);
+        return CommonResponse.success();
+    }
+
+    public Resource getContractFileResource(String contractCode) throws MalformedURLException {
+        log.info("[Begin] Get contract file resource by contract code: {}", contractCode);
+
+        FileContract fileContract = fileContractRepository.findFileByPriority(contractCode)
+                .orElseThrow(() -> new RuntimeException("No contract file found for contract code: " + contractCode));
+
+        Path path = Paths.get(fileContract.getFilePath());
+        Resource resource = new UrlResource(path.toUri());
+
+        if (!resource.exists() || !resource.isReadable()) {
+            throw new RuntimeException("File not found or not readable: " + fileContract.getFilePath());
+        }
+
+        log.info("[End] Get contract file resource successfully for contract code: {}", contractCode);
+        return resource;
     }
 }

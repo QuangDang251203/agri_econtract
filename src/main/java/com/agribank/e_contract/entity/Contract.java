@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Contract {
     @Id
+    @Column(name = "contract_code", nullable = false, unique = true)
     private String contractCode;
 
     @ManyToOne

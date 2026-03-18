@@ -1,19 +1,25 @@
 package com.agribank.e_contract.service.contract;
 
 import com.agribank.e_contract.constant.CommonConstant;
-import com.agribank.e_contract.constant.MailConstant;
 import com.agribank.e_contract.dto.ContractDTO;
 import com.agribank.e_contract.dto.ContractRequest;
 import com.agribank.e_contract.entity.SavingBook;
 import com.agribank.e_contract.repository.ClientRepository;
 import com.agribank.e_contract.repository.SavingBookRepository;
-import com.agribank.e_contract.service.mail.MailService;
 import com.agribank.e_contract.utils.CommonUtils;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
+
+import java.io.File;
+import java.io.IOException;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -121,5 +127,47 @@ public class ContractServiceHelper {
     public String getOTP(String contractCode) {
         String key = "otp:contract:" + contractCode;
         return (String) redisTemplate.opsForValue().get(key);
+    }
+
+    public String buildSignedPdfPath(String originalPdfPath) {
+        if (originalPdfPath == null || originalPdfPath.isBlank()) {
+            throw new IllegalArgumentException("Original PDF path is null or blank");
+        }
+
+        if (originalPdfPath.toLowerCase().endsWith(".pdf")) {
+            return originalPdfPath.substring(0, originalPdfPath.length() - 4) + "_signed.pdf";
+        }
+        return originalPdfPath + "_signed.pdf";
+    }
+
+    public void stampSignatureOnPdf(String sourcePdfPath, byte[] signatureBytes, String outputPdfPath) throws IOException {
+        try (PDDocument document = PDDocument.load(new File(sourcePdfPath))) {
+            if (document.getNumberOfPages() == 0) {
+                throw new IOException("PDF has no pages");
+            }
+
+            PDPage lastPage = document.getPage(document.getNumberOfPages() - 1);
+            PDImageXObject signatureImage = PDImageXObject.createFromByteArray(document, signatureBytes, "signature");
+
+            float imageWidth = 110f;
+            float imageHeight = imageWidth * signatureImage.getHeight() / signatureImage.getWidth();
+
+            // chỉnh lên cao hơn 1 chút và sang phải 1 chút
+            float x = 100f;
+            float y = 570f;
+
+            float pageWidth = lastPage.getMediaBox().getWidth();
+            float pageHeight = lastPage.getMediaBox().getHeight();
+
+            x = Math.max(36f, Math.min(x, pageWidth - imageWidth - 36f));
+            y = Math.max(36f, Math.min(y, pageHeight - imageHeight - 36f));
+
+            try (PDPageContentStream contentStream = new PDPageContentStream(
+                    document, lastPage, AppendMode.APPEND, true, true)) {
+                contentStream.drawImage(signatureImage, x, y, imageWidth, imageHeight);
+            }
+
+            document.save(outputPdfPath);
+        }
     }
 }
