@@ -17,11 +17,12 @@ import com.agribank.e_contract.utils.CommonUtils;
 import com.deepoove.poi.XWPFTemplate;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -54,6 +55,10 @@ public class ContractServiceImpl implements ContractService {
     private final ClientRepository clientRepository;
     private final FileContractRepository fileContractRepository;
     private final FileContractMapper filePathMapper;
+    private final ResourceLoader resourceLoader;
+
+    @Value("${contract.seal.path:classpath:static/seal/agribank-seal.png}")
+    private String sealResourcePath;
 
     public String createContract(ContractDTO dto) {
         log.info("[Begin]Create contract with data request: {}", dto);
@@ -338,6 +343,75 @@ public class ContractServiceImpl implements ContractService {
 
         log.info("[End] Sign contract successfully - contractCode: {}", contractCode);
         return CommonResponse.success();
+    }
+
+    @Transactional
+    public CommonResponse approveContract(String contractCode) throws IOException {
+        log.info("[Begin] Approve contract - contractCode: {}", contractCode);
+
+        Contract contract = contractRepo.findByContractCode(contractCode);
+        if (contract == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+
+        if (contract.getStatus() != CommonConstant.SIGNED_CONTRACT) {
+            throw new RuntimeException("Contract is not in signed status");
+        }
+
+        FileContract latestSigned = fileContractRepository
+                .findTopByContract_ContractCodeAndFileTypeOrderByIdDesc(contractCode, "signed_pdf")
+                .orElseThrow(() -> new RuntimeException("Signed PDF not found for contract: " + contractCode));
+
+        byte[] sealBytes = loadSealImageBytes();
+        String stampedPdfPath = contractHelper.buildStampedPdfPath(latestSigned.getFilePath());
+        contractHelper.stampSealOnPdf(latestSigned.getFilePath(), sealBytes, stampedPdfPath);
+
+        FileContract stampedFile = new FileContract();
+        stampedFile.setContract(contract);
+        stampedFile.setFilePath(stampedPdfPath);
+        stampedFile.setFileType("stamped_pdf");
+        fileContractRepository.save(stampedFile);
+
+        contract.setStatus(CommonConstant.ACCEPT_CONTRACT);
+        contractRepo.save(contract);
+
+        log.info("[End] Approve contract successfully - contractCode: {}", contractCode);
+        return CommonResponse.success();
+    }
+
+    @Transactional
+    public CommonResponse rejectContract(String contractCode) {
+        log.info("[Begin] Reject contract - contractCode: {}", contractCode);
+
+        Contract contract = contractRepo.findByContractCode(contractCode);
+        if (contract == null) {
+            throw new RuntimeException("Contract not found with code: " + contractCode);
+        }
+
+        if (contract.getStatus() != CommonConstant.SIGNED_CONTRACT) {
+            throw new RuntimeException("Contract is not in signed status");
+        }
+
+        contract.setStatus(CommonConstant.REJECTED_CONTRACT);
+        contractRepo.save(contract);
+
+        log.info("[End] Reject contract successfully - contractCode: {}", contractCode);
+        return CommonResponse.success();
+    }
+
+    private byte[] loadSealImageBytes() throws IOException {
+        String normalizedPath = sealResourcePath == null
+                ? "classpath:static/seal/agribank-seal.png"
+                : sealResourcePath.replace(" ", "").replace("//", "/");
+
+        Resource sealResource = resourceLoader.getResource(normalizedPath);
+        if (!sealResource.exists()) {
+            throw new RuntimeException("Seal image not found at configured path: " + normalizedPath);
+        }
+
+        try (InputStream inputStream = sealResource.getInputStream()) {
+            return inputStream.readAllBytes();
+        }
     }
 
     public Resource getContractFileResource(String contractCode) throws MalformedURLException {

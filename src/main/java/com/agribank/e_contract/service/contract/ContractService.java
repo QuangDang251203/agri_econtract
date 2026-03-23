@@ -29,5 +29,7 @@ public interface ContractService {
     CommonResponse signContractWithSignature(String contractCode,
                                              String otpCode,
                                              MultipartFile signatureFile) throws IOException;
+    CommonResponse approveContract(String contractCode) throws IOException;
+    CommonResponse rejectContract(String contractCode);
     Resource getContractFileResource(String contractCode) throws MalformedURLException;
 }

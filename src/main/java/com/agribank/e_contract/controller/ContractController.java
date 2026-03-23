@@ -39,6 +39,16 @@ public class ContractController {
         return contractService.signContractWithSignature(contractCode, otpCode, signatureFile);
     }
 
+    @PostMapping("/admin/approve/{contractCode}")
+    public CommonResponse approveContract(@PathVariable String contractCode) throws IOException {
+        return contractService.approveContract(contractCode);
+    }
+
+    @PostMapping("/admin/reject/{contractCode}")
+    public CommonResponse rejectContract(@PathVariable String contractCode) {
+        return contractService.rejectContract(contractCode);
+    }
+
     @PutMapping("/deleteContract/{contractCode}")
     public CommonResponse deleteContract(@PathVariable String contractCode) {
         return contractService.deleteContract(contractCode);
@@ -84,6 +94,7 @@ public class ContractController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"contract.pdf\"")
                 .body(resource);
     }
+
 
 }
 

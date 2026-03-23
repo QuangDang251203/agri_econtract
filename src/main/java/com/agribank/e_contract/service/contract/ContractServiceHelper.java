@@ -130,31 +130,49 @@ public class ContractServiceHelper {
     }
 
     public String buildSignedPdfPath(String originalPdfPath) {
+        return buildPdfPathWithSuffix(originalPdfPath, "_signed");
+    }
+
+    public String buildStampedPdfPath(String originalPdfPath) {
+        return buildPdfPathWithSuffix(originalPdfPath, "_stamped");
+    }
+
+    private String buildPdfPathWithSuffix(String originalPdfPath, String suffix) {
         if (originalPdfPath == null || originalPdfPath.isBlank()) {
             throw new IllegalArgumentException("Original PDF path is null or blank");
         }
 
         if (originalPdfPath.toLowerCase().endsWith(".pdf")) {
-            return originalPdfPath.substring(0, originalPdfPath.length() - 4) + "_signed.pdf";
+            return originalPdfPath.substring(0, originalPdfPath.length() - 4) + suffix + ".pdf";
         }
-        return originalPdfPath + "_signed.pdf";
+        return originalPdfPath + suffix + ".pdf";
     }
 
     public void stampSignatureOnPdf(String sourcePdfPath, byte[] signatureBytes, String outputPdfPath) throws IOException {
+        stampImageOnLastPage(sourcePdfPath, signatureBytes, outputPdfPath, 100f, 570f, 110f, "signature");
+    }
+
+    public void stampSealOnPdf(String sourcePdfPath, byte[] sealBytes, String outputPdfPath) throws IOException {
+        // Move seal a bit to the right and lower for better alignment in the Agribank sign area.
+        stampImageOnLastPage(sourcePdfPath, sealBytes, outputPdfPath, 345f, 520f, 120f, "seal");
+    }
+
+    private void stampImageOnLastPage(String sourcePdfPath,
+                                      byte[] imageBytes,
+                                      String outputPdfPath,
+                                      float x,
+                                      float y,
+                                      float imageWidth,
+                                      String imageName) throws IOException {
         try (PDDocument document = PDDocument.load(new File(sourcePdfPath))) {
             if (document.getNumberOfPages() == 0) {
                 throw new IOException("PDF has no pages");
             }
 
             PDPage lastPage = document.getPage(document.getNumberOfPages() - 1);
-            PDImageXObject signatureImage = PDImageXObject.createFromByteArray(document, signatureBytes, "signature");
+            PDImageXObject image = PDImageXObject.createFromByteArray(document, imageBytes, imageName);
 
-            float imageWidth = 110f;
-            float imageHeight = imageWidth * signatureImage.getHeight() / signatureImage.getWidth();
-
-            // chỉnh lên cao hơn 1 chút và sang phải 1 chút
-            float x = 100f;
-            float y = 570f;
+            float imageHeight = imageWidth * image.getHeight() / image.getWidth();
 
             float pageWidth = lastPage.getMediaBox().getWidth();
             float pageHeight = lastPage.getMediaBox().getHeight();
@@ -164,7 +182,7 @@ public class ContractServiceHelper {
 
             try (PDPageContentStream contentStream = new PDPageContentStream(
                     document, lastPage, AppendMode.APPEND, true, true)) {
-                contentStream.drawImage(signatureImage, x, y, imageWidth, imageHeight);
+                contentStream.drawImage(image, x, y, imageWidth, imageHeight);
             }
 
             document.save(outputPdfPath);
