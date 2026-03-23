@@ -1,5 +1,6 @@
 package com.agribank.e_contract.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -10,16 +11,16 @@ import java.util.Date;
 @Data
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "business_code")
+    private String businessCode;
 
-    private String fullName;
+    private String businessName;
     private String email;
-    private Date birthDate;
     private String phone;
     private String address;
 
     @OneToOne
     @JoinColumn(name = "cccd_id")
+    @JsonIgnore
     private CCCD cccd;
 }

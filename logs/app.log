@@ -1,0 +1,711 @@
+2026-03-18T08:21:27.547+07:00  INFO 12840 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 12840 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-18T08:21:27.555+07:00  INFO 12840 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-18T08:21:28.473+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T08:21:28.475+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-18T08:21:28.694+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 7 JPA repository interfaces.
+2026-03-18T08:21:28.751+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T08:21:28.759+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-18T08:21:28.785+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.786+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.786+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.CCCDRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.787+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.788+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.788+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.FileContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.789+07:00  INFO 12840 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.SavingBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T08:21:28.789+07:00  INFO 12840 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-03-18T08:21:29.520+07:00  INFO 12840 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-18T08:21:29.534+07:00  INFO 12840 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-18T08:21:29.535+07:00  INFO 12840 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-18T08:21:29.596+07:00  INFO 12840 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1988 ms
+2026-03-18T08:21:29.831+07:00  INFO 12840 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-18T08:21:29.910+07:00  INFO 12840 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-18T08:21:30.562+07:00  INFO 12840 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-18T08:21:30.608+07:00  INFO 12840 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-18T08:21:30.745+07:00  INFO 12840 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5d6d424d
+2026-03-18T08:21:30.747+07:00  INFO 12840 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-18T08:21:30.799+07:00  WARN 12840 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-18T08:21:30.823+07:00  INFO 12840 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-18T08:21:31.915+07:00  INFO 12840 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-18T08:21:31.924+07:00  INFO 12840 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T08:21:32.017+07:00  INFO 12840 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-18T08:21:32.810+07:00  WARN 12840 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-18T08:21:32.904+07:00  WARN 12840 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 70bf4de0-a56b-4519-a696-bae0129de921
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-18T08:21:32.914+07:00  INFO 12840 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-18T08:21:33.596+07:00  INFO 12840 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-18T08:21:33.655+07:00  INFO 12840 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-18T08:21:33.663+07:00  INFO 12840 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 6.655 seconds (process running for 7.698)
+2026-03-18T08:22:33.689+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-18T08:22:33.690+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-18T08:22:33.692+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-18T08:22:33.736+07:00  WARN 12840 --- [agribank_e-contract] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-03-18T08:22:42.113+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T08:22:42.272+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T08:23:29.757+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T08:23:30.164+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T08:23:30.166+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T08:23:30.173+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T08:36:06.416+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T08:36:06.423+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T08:36:06.425+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T08:36:06.429+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T08:42:20.531+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:42:20.531+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:42:20.546+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:42:20.546+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:42:22.274+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:42:22.281+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:42:22.284+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:42:22.287+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T08:42:22.291+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:42:22.296+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:42:22.298+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:42:22.300+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T08:49:07.313+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:49:07.313+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:49:07.321+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:49:07.321+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:49:09.030+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:49:09.036+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:49:09.038+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:49:09.040+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T08:49:09.043+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:49:09.050+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:49:09.053+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:49:09.055+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T08:50:59.200+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:50:59.200+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T08:50:59.207+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:50:59.207+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T08:51:00.637+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:51:00.642+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:51:00.644+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:51:00.646+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T08:51:00.649+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T08:51:00.656+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T08:51:00.659+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T08:51:00.661+07:00  INFO 12840 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:00:00.032+07:00  INFO 12840 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-18T09:00:00.043+07:00  INFO 12840 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-18T09:00:00.064+07:00  INFO 12840 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:00:00.066+07:00  INFO 12840 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-18T09:00:00.069+07:00  INFO 12840 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-18T09:00:06.460+07:00  INFO 10028 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 10028 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-18T09:00:06.463+07:00  INFO 10028 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-18T09:00:07.268+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:00:07.270+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-18T09:00:07.445+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 7 JPA repository interfaces.
+2026-03-18T09:00:07.495+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:00:07.503+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-18T09:00:07.530+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.531+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.531+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.CCCDRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.531+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.532+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.532+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.FileContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.532+07:00  INFO 10028 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.SavingBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:00:07.532+07:00  INFO 10028 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-03-18T09:00:08.138+07:00  INFO 10028 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-18T09:00:08.152+07:00  INFO 10028 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-18T09:00:08.153+07:00  INFO 10028 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-18T09:00:08.209+07:00  INFO 10028 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1705 ms
+2026-03-18T09:00:08.388+07:00  INFO 10028 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-18T09:00:08.437+07:00  INFO 10028 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-18T09:00:08.900+07:00  INFO 10028 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-18T09:00:08.930+07:00  INFO 10028 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-18T09:00:09.016+07:00  INFO 10028 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@726ef6aa
+2026-03-18T09:00:09.018+07:00  INFO 10028 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-18T09:00:09.051+07:00  WARN 10028 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-18T09:00:09.070+07:00  INFO 10028 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-18T09:00:10.051+07:00  INFO 10028 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-18T09:00:10.058+07:00  INFO 10028 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:00:10.133+07:00  INFO 10028 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-18T09:00:10.786+07:00  WARN 10028 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-18T09:00:10.867+07:00  WARN 10028 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 58ad6fd2-a1c1-4565-b012-095f70ed0edf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-18T09:00:10.875+07:00  INFO 10028 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-18T09:00:11.482+07:00  INFO 10028 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-18T09:00:11.540+07:00  INFO 10028 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-18T09:00:11.550+07:00  INFO 10028 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.594 seconds (process running for 6.396)
+2026-03-18T09:00:16.595+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-18T09:00:16.596+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-18T09:00:16.597+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-18T09:00:16.650+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T09:00:17.223+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T09:00:17.225+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T09:00:17.232+07:00  INFO 10028 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T09:01:41.475+07:00  INFO 10028 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-18T09:01:41.485+07:00  INFO 10028 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-18T09:01:41.501+07:00  INFO 10028 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:01:41.504+07:00  INFO 10028 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-18T09:01:41.507+07:00  INFO 10028 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-18T09:01:47.630+07:00  INFO 9632 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 9632 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-18T09:01:47.633+07:00  INFO 9632 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-18T09:01:48.440+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:01:48.442+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-18T09:01:48.624+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 7 JPA repository interfaces.
+2026-03-18T09:01:48.676+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:01:48.677+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-18T09:01:48.703+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.704+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.704+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.CCCDRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.705+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.705+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.705+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.FileContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.706+07:00  INFO 9632 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.SavingBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:01:48.706+07:00  INFO 9632 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-03-18T09:01:49.290+07:00  INFO 9632 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-18T09:01:49.304+07:00  INFO 9632 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-18T09:01:49.304+07:00  INFO 9632 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-18T09:01:49.357+07:00  INFO 9632 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1680 ms
+2026-03-18T09:01:49.558+07:00  INFO 9632 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-18T09:01:49.608+07:00  INFO 9632 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-18T09:01:50.095+07:00  INFO 9632 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-18T09:01:50.129+07:00  INFO 9632 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-18T09:01:50.219+07:00  INFO 9632 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77b27b57
+2026-03-18T09:01:50.220+07:00  INFO 9632 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-18T09:01:50.249+07:00  WARN 9632 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-18T09:01:50.268+07:00  INFO 9632 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-18T09:01:51.245+07:00  INFO 9632 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-18T09:01:51.254+07:00  INFO 9632 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:01:51.334+07:00  INFO 9632 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-18T09:01:52.031+07:00  WARN 9632 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-18T09:01:52.117+07:00  WARN 9632 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d19b2d46-20a5-429c-911f-5cfbfe020426
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-18T09:01:52.126+07:00  INFO 9632 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-18T09:01:52.741+07:00  INFO 9632 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-18T09:01:52.800+07:00  INFO 9632 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-18T09:01:52.807+07:00  INFO 9632 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.681 seconds (process running for 6.486)
+2026-03-18T09:01:57.598+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-18T09:01:57.598+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-18T09:01:57.600+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-18T09:01:57.651+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T09:01:58.157+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T09:01:58.161+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T09:01:58.169+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T09:04:14.988+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:04:14.988+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:04:15.001+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:04:15.002+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:04:16.518+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:04:16.525+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:04:16.528+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:04:16.531+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:04:16.536+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:04:16.545+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:04:16.548+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:04:16.550+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:06:32.509+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:06:32.509+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:06:32.518+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:06:32.518+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:06:33.808+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:06:33.816+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:06:33.819+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:06:33.821+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:06:33.826+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:06:33.836+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:06:33.838+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:06:33.840+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:07:12.419+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:07:12.419+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:07:12.427+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:07:12.427+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:07:13.515+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:07:13.523+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:07:13.525+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:07:13.526+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:07:13.531+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:07:13.540+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:07:13.543+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:07:13.550+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:08:13.127+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T09:08:13.135+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T09:08:13.137+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T09:08:13.139+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T09:09:40.101+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:09:40.101+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:09:40.108+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:09:40.108+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:09:41.432+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:09:41.440+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:09:41.442+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:09:41.444+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:09:41.448+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:09:41.456+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:09:41.461+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:09:41.463+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:10:18.241+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:10:18.241+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:10:18.248+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:10:18.248+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:10:19.896+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:10:19.902+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:10:19.905+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:10:19.907+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:10:19.911+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:10:19.919+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:10:19.922+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:10:19.923+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:11:28.677+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:11:28.677+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:11:28.683+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:11:28.683+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:11:29.776+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:11:29.782+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:11:29.784+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:11:29.786+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:11:29.789+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:11:29.797+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:11:29.800+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:11:29.801+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:12:30.484+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:12:30.485+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:12:30.492+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:12:30.492+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:12:31.612+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:12:31.618+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:12:31.620+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:12:31.622+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:12:31.625+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:12:31.632+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:12:31.635+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:12:31.637+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:12:49.814+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:12:49.814+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:12:49.821+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:12:49.821+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:12:50.866+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:12:50.873+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:12:50.875+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:12:50.877+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:12:50.881+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:12:50.890+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:12:50.892+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:12:50.893+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:14:39.380+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:14:39.381+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:14:39.386+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:14:39.386+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:14:40.354+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:14:40.360+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:14:40.363+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:14:40.364+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:14:40.367+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:14:40.375+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:14:40.377+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:14:40.379+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:15:08.232+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:08.232+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:08.240+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:08.240+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:09.321+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:15:09.327+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:15:09.329+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:15:09.330+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:15:09.334+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:15:09.342+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:15:09.344+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:15:09.346+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:15:21.687+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:21.687+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:21.695+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:21.695+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:22.672+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T09:15:22.681+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T09:15:22.684+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T09:15:22.685+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T09:15:22.688+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT787828
+2026-03-18T09:15:22.696+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT787828
+2026-03-18T09:15:22.699+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT787828
+2026-03-18T09:15:22.700+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT787828
+2026-03-18T09:15:26.997+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:26.997+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:27.004+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:27.004+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:28.024+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT815003
+2026-03-18T09:15:28.031+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT815003
+2026-03-18T09:15:28.035+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT815003
+2026-03-18T09:15:28.037+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT815003
+2026-03-18T09:15:28.042+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT815003
+2026-03-18T09:15:28.048+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT815003
+2026-03-18T09:15:28.050+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT815003
+2026-03-18T09:15:28.051+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT815003
+2026-03-18T09:15:29.813+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:29.813+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:29.820+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:29.820+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:58.088+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:58.088+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:15:58.093+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:58.093+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:15:59.015+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:15:59.019+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:15:59.021+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:15:59.022+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:15:59.025+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:15:59.030+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:15:59.032+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:15:59.033+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:16:21.005+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:16:21.005+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:16:21.010+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:16:21.010+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:16:22.516+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:16:22.523+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:16:22.525+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:16:22.527+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:16:22.531+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:16:22.536+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:16:22.538+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:16:22.540+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:21:27.124+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:21:27.160+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:27:20.285+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:27:20.285+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:27:20.291+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:27:20.292+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:27:56.489+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:27:56.489+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:27:56.496+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:27:56.497+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:34:05.319+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:05.319+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:05.325+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:34:05.325+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:34:18.572+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:34:18.577+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:34:18.579+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:34:18.580+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:34:18.584+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:34:18.589+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:34:18.591+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:34:18.593+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:34:21.874+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:34:21.874+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:34:21.881+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:34:21.881+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:34:24.686+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:24.686+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:24.694+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:34:24.694+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:34:25.862+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:34:25.862+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:34:25.867+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:34:25.867+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:34:56.175+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:56.175+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:34:56.182+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:34:56.182+07:00  INFO 9632 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:38:10.382+07:00  INFO 9632 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-18T09:38:10.394+07:00  INFO 9632 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-18T09:38:10.415+07:00  INFO 9632 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:38:10.419+07:00  INFO 9632 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-18T09:38:10.422+07:00  INFO 9632 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-18T09:38:15.705+07:00  INFO 14480 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 14480 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-18T09:38:15.708+07:00  INFO 14480 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-18T09:38:16.524+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:38:16.526+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-18T09:38:16.724+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 7 JPA repository interfaces.
+2026-03-18T09:38:16.784+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:38:16.786+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-18T09:38:16.804+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.804+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.805+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.CCCDRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.805+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.805+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.806+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.FileContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.806+07:00  INFO 14480 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.SavingBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:38:16.806+07:00  INFO 14480 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-03-18T09:38:17.409+07:00  INFO 14480 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-18T09:38:17.423+07:00  INFO 14480 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-18T09:38:17.424+07:00  INFO 14480 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-18T09:38:17.479+07:00  INFO 14480 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1726 ms
+2026-03-18T09:38:17.666+07:00  INFO 14480 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-18T09:38:17.722+07:00  INFO 14480 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-18T09:38:18.198+07:00  INFO 14480 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-18T09:38:18.229+07:00  INFO 14480 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-18T09:38:18.314+07:00  INFO 14480 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@13ebccd
+2026-03-18T09:38:18.316+07:00  INFO 14480 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-18T09:38:18.345+07:00  WARN 14480 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-18T09:38:18.362+07:00  INFO 14480 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-18T09:38:19.303+07:00  INFO 14480 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-18T09:38:19.310+07:00  INFO 14480 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:38:19.384+07:00  INFO 14480 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-18T09:38:20.026+07:00  WARN 14480 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-18T09:38:20.104+07:00  WARN 14480 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0b30a922-28e3-4a34-9ab8-0085a057d2cf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-18T09:38:20.111+07:00  INFO 14480 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-18T09:38:20.670+07:00  INFO 14480 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-18T09:38:20.725+07:00  INFO 14480 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-18T09:38:20.732+07:00  INFO 14480 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.524 seconds (process running for 6.353)
+2026-03-18T09:38:26.378+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-18T09:38:26.378+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-18T09:38:26.380+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-18T09:38:26.469+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:38:26.469+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:38:26.948+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:38:26.948+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:38:28.405+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:38:28.456+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:38:28.459+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:38:28.466+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:38:28.483+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:38:28.491+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:38:28.493+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:38:28.496+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:38:34.189+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:38:34.189+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:38:34.199+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:38:34.200+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:38:36.257+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:38:36.257+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:38:36.291+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:38:36.291+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:38:37.532+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:38:37.541+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:38:37.543+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:38:37.545+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:38:37.549+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT725890
+2026-03-18T09:38:37.556+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT725890
+2026-03-18T09:38:37.558+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT725890
+2026-03-18T09:38:37.560+07:00  INFO 14480 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT725890
+2026-03-18T09:43:24.880+07:00  INFO 14480 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-18T09:43:24.891+07:00  INFO 14480 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-18T09:43:24.907+07:00  INFO 14480 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:43:24.909+07:00  INFO 14480 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-18T09:43:24.912+07:00  INFO 14480 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-18T09:43:31.391+07:00  INFO 6116 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Starting AgribankEContractApplication using Java 21.0.2 with PID 6116 (C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract\target\classes started by Hi in C:\Users\Hi\OneDrive\Documents\NetBeansProjects\agribank.e_contract)
+2026-03-18T09:43:31.393+07:00  INFO 6116 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-18T09:43:32.242+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:43:32.244+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-18T09:43:32.440+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 7 JPA repository interfaces.
+2026-03-18T09:43:32.491+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-18T09:43:32.492+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-18T09:43:32.513+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.513+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.514+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.CCCDRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.514+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.514+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.ContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.514+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.FileContractRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.514+07:00  INFO 6116 --- [agribank_e-contract] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agribank.e_contract.repository.SavingBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-18T09:43:32.515+07:00  INFO 6116 --- [agribank_e-contract] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-03-18T09:43:33.102+07:00  INFO 6116 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-18T09:43:33.116+07:00  INFO 6116 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-18T09:43:33.117+07:00  INFO 6116 --- [agribank_e-contract] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-18T09:43:33.168+07:00  INFO 6116 --- [agribank_e-contract] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1727 ms
+2026-03-18T09:43:33.360+07:00  INFO 6116 --- [agribank_e-contract] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-18T09:43:33.411+07:00  INFO 6116 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-18T09:43:33.920+07:00  INFO 6116 --- [agribank_e-contract] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-18T09:43:33.955+07:00  INFO 6116 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-18T09:43:34.055+07:00  INFO 6116 --- [agribank_e-contract] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@582c1f8d
+2026-03-18T09:43:34.057+07:00  INFO 6116 --- [agribank_e-contract] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-18T09:43:34.085+07:00  WARN 6116 --- [agribank_e-contract] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-18T09:43:34.103+07:00  INFO 6116 --- [agribank_e-contract] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/agribank?user=root&password=***]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 11.6.2
+	Default catalog/schema: agribank/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-18T09:43:35.106+07:00  INFO 6116 --- [agribank_e-contract] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-18T09:43:35.114+07:00  INFO 6116 --- [agribank_e-contract] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:43:35.198+07:00  INFO 6116 --- [agribank_e-contract] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-18T09:43:35.888+07:00  WARN 6116 --- [agribank_e-contract] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-18T09:43:35.973+07:00  WARN 6116 --- [agribank_e-contract] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 998d95ab-c120-4979-82c1-47592ea8b6fd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-18T09:43:35.981+07:00  INFO 6116 --- [agribank_e-contract] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-18T09:43:36.620+07:00  INFO 6116 --- [agribank_e-contract] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-03-18T09:43:36.680+07:00  INFO 6116 --- [agribank_e-contract] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-18T09:43:36.687+07:00  INFO 6116 --- [agribank_e-contract] [main] c.a.e.AgribankEContractApplication       : Started AgribankEContractApplication in 5.809 seconds (process running for 6.686)
+2026-03-18T09:43:45.019+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-18T09:43:45.020+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-18T09:43:45.022+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-18T09:43:45.066+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:43:45.282+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:45:11.092+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:45:11.092+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:45:11.101+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:45:11.101+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:45:59.350+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:45:59.350+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:45:59.631+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:45:59.631+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:46:01.357+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:46:01.357+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:46:01.369+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:46:01.369+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:46:14.584+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:46:14.585+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:46:14.596+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:46:14.596+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:11.085+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:11.085+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:11.096+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:11.096+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:12.028+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:12.029+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:12.039+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:12.039+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:14.169+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:14.169+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:14.179+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:14.179+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:17.937+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:17.937+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:17.944+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:17.944+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:26.177+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:26.177+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:47:26.187+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:26.187+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:47:27.027+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:27.027+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:47:27.036+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:47:27.036+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:26.565+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:26.565+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:26.580+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:26.580+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:27.608+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:27.608+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:27.615+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:27.616+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:28.460+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:28.460+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:28.470+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:28.470+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:28.983+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:28.983+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:28.992+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:28.992+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:29.922+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:29.923+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:29.932+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:29.932+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:31.460+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:31.461+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:31.470+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:31.471+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:32.593+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:32.593+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:32.600+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:32.600+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:42.443+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:42.443+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:48:42.450+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:42.450+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:48:51.286+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:51.286+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:48:51.296+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:51.296+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:48:52.584+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT815003
+2026-03-18T09:48:52.600+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT815003
+2026-03-18T09:48:52.603+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT815003
+2026-03-18T09:48:52.611+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT815003
+2026-03-18T09:48:52.628+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract detail by contractCode: CT815003
+2026-03-18T09:48:52.637+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract file resource by contract code: CT815003
+2026-03-18T09:48:52.639+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract file resource successfully for contract code: CT815003
+2026-03-18T09:48:52.643+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get contract detail by contractCode successfully: CT815003
+2026-03-18T09:49:06.928+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:06.929+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:06.936+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-6] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:06.936+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-7] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:07.876+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:07.876+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:07.891+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-8] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:49:07.891+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-9] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:49:08.671+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:08.671+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:08.680+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-3] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:08.680+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-10] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:09.133+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:09.133+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:09.142+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:49:09.142+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:49:23.469+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:23.470+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:23.476+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:23.478+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:35.813+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:35.814+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get contract by business code: DQP012012
+2026-03-18T09:49:35.820+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-5] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:35.822+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-1] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts by business code: DQP012012
+2026-03-18T09:49:36.434+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:36.434+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [Begin] Get all contracts
+2026-03-18T09:49:36.442+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-4] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:49:36.442+07:00  INFO 6116 --- [agribank_e-contract] [http-nio-8080-exec-2] c.a.e.s.contract.ContractServiceImpl     : [End] Get 3 contracts
+2026-03-18T09:50:43.506+07:00  INFO 6116 --- [agribank_e-contract] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-18T09:50:43.517+07:00  INFO 6116 --- [agribank_e-contract] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-18T09:50:43.535+07:00  INFO 6116 --- [agribank_e-contract] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-18T09:50:43.538+07:00  INFO 6116 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-18T09:50:43.541+07:00  INFO 6116 --- [agribank_e-contract] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
